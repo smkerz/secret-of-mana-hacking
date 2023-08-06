@@ -38,7 +38,7 @@ On this example, the room number is 6.
 
 It's still possible to optimize and earn some bytes but it will require a lot of work.
 
-Tomm is currently experimenting new level design a new level design throught this new compressing function.
+Tomm is currently experimenting a new level design throught this new compressing function.
 Here is an example of his creation:
 
 <img src="/Images%20GitHub/Tomm_room.png" alt="Tomm Room" style="width:200px;"/>
