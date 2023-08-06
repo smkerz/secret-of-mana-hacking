@@ -14,4 +14,22 @@ We begun with Excel Macro, which can be a little weird at the first glimpse but 
 
 So the  main feature right now are:
 
-Decompression of a room and display it on a sheet:
+- Display a room with its original game code on a sheet (image 1)
+- Display a room with its uncompressed code on a sheet (image 2)
+- Recompress a room with our original compressor (image 3)
+
+
+
+
+Note our compressor is mire efficient than the original and it is working on the game.
+On this example, the room number is 6.
+Number of bytes in the original game = 1168
+Number of byteswith our compressor = 1162
+It's still possible to optimize more but will require a lot of work.
+
+Tomm is currently experiencing news level design throught this new compressing function.
+Here is an example of its creation:
+
+
+
+Keep in touch!
