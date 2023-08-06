@@ -6,7 +6,7 @@ At the moment we are a team composed of two fan of SoM
   - Tomm
   - smK
 
-Tomm knows quite a lot the code of the game and smK (myself) code the main function of the code.
+Tomm knows quite a lot the code of the game and smK (myself) codes the main function of the code.
 
 So what we have now?
 
@@ -38,7 +38,7 @@ On this example, the room number is 6.
 
 It's still possible to optimize more but will require a lot of work.
 
-Tomm is currently experiencing news level design throught this new compressing function.
+Tomm is currently experimenting new level design a new level design throught this new compressing function.
 Here is an example of his creation:
 
 <img src="/Images%20GitHub/Tomm_room.png" alt="Tomm Room" style="width:200px;"/>
