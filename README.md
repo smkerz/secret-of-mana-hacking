@@ -24,8 +24,8 @@ So the  main feature right now are:
 
 Note our compressor is mire efficient than the original and it is working on the game.
 On this example, the room number is 6.
-Number of bytes in the original game = 1168
-Number of byteswith our compressor = 1162
+- Number of bytes in the original game = 1168
+- Number of byteswith our compressor = 1162
 It's still possible to optimize more but will require a lot of work.
 
 Tomm is currently experiencing news level design throught this new compressing function.
