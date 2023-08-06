@@ -18,7 +18,7 @@ So the  main feature right now are:
 - Display a room with its uncompressed code on a sheet (image 2)
 - Recompress a room with our original compressor (image 3)
 
-<img src="/Images%20GitHub/Room6_original_code.png" alt="mypic" style="width:200px;/>
+<img src="/Images%20GitHub/Room6_original_code.png" alt="mypic" style="width:200px;"/>
 
 ![Alt text](/Images%20GitHub/Room6_original_code.png?raw=true "Image 1")
 ![Alt text](/Images%20GitHub/Room6_uncompressed_code.png?raw=true "Image 2")
