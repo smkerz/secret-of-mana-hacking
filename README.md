@@ -18,9 +18,13 @@ So the  main feature right now are:
 - Display a room with its uncompressed code on a sheet (image 2)
 - Recompress a room with our original compressor (image 3)
 
-<img src="/Images%20GitHub/Room6_original_code.png" alt="Image 1" style="width:200px;"/>
-<img src="/Images%20GitHub/Room6_uncompressed_code.png" alt="Image 2" style="width:200px;"/>
-<img src="/Images%20GitHub/Room6_compressed_code.png" alt="Image 3" style="width:200px;"/>
+<table border="0">
+<tr>
+<td><img src="/Images%20GitHub/Room6_original_code.png" alt="Image 1" style="width:200px;"/></td>
+<td><img src="/Images%20GitHub/Room6_uncompressed_code.png" alt="Image 2" style="width:200px;"/></td>
+<td><img src="/Images%20GitHub/Room6_compressed_code.png" alt="Image 3" style="width:200px;"/></td>
+</tr>
+</table>
 
 Note our compressor is mire efficient than the original and it is working on the game.
 On this example, the room number is 6.
