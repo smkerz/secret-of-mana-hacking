@@ -19,8 +19,8 @@ So the  main feature right now are:
 - Recompress a room with our original compressor (image 3)
 
 <img src="/Images%20GitHub/Room6_original_code.png" alt="Image 1" style="width:200px;"/>
-<img src="/Images%20GitHub/Room6_uncompressed_code" alt="Image 2" style="width:200px;"/>
-<img src="/Images%20GitHub/Room6_compressed_code" alt="Image 3" style="width:200px;"/>
+<img src="/Images%20GitHub/Room6_uncompressed_code.png" alt="Image 2" style="width:200px;"/>
+<img src="/Images%20GitHub/Room6_compressed_code.png" alt="Image 3" style="width:200px;"/>
 
 Note our compressor is mire efficient than the original and it is working on the game.
 On this example, the room number is 6.
