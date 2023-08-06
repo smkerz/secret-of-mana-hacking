@@ -2,7 +2,7 @@
 
 We are trying to hack Secret Of Mana, the main goal is to create a new editor for our favorite game.
 
-At the moment we are a team composed of two fan of SoM
+At the moment we are a team composed of two fans of SoM
   - Tomm
   - smK
 
