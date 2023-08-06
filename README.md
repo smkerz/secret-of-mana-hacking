@@ -20,6 +20,11 @@ So the  main feature right now are:
 
 <table border="0">
 <tr>
+<td>Image 1</td>
+<td>Image 2</td>
+<td>Image 3</td>
+</tr>
+<tr>
 <td><img src="/Images%20GitHub/Room6_original_code.png" alt="Image 1" style="width:200px;"/></td>
 <td><img src="/Images%20GitHub/Room6_uncompressed_code.png" alt="Image 2" style="width:200px;"/></td>
 <td><img src="/Images%20GitHub/Room6_compressed_code.png" alt="Image 3" style="width:200px;"/></td>
