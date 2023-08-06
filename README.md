@@ -32,6 +32,6 @@ It's still possible to optimize more but will require a lot of work.
 Tomm is currently experiencing news level design throught this new compressing function.
 Here is an example of its creation:
 
-
+<img src="/Images%20GitHub/Tomm_room.png" alt="Tomm Room" style="width:200px;"/>
 
 Keep in touch!
