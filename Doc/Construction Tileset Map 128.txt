@@ -1,0 +1,83 @@
+Todo, savoir ce que fait le 82 dans le PRG
+Mettre sur un excel avec deux / trois rooms pour mieux analyser
+
+Breakpoint en cours :
+C4A0 Lecture du header
+01F510	Construction du tileset
+
+
+
+Bien Commenté
+-------------
+
+Map 128
+
+La fonction à C4AA remplis complétement le tileset 8x8
+
+Construction des Objets de la map 128 : 0x8AE90 (ci-dessous)
+
+<ingame>
+C2 9A 82 00 80 41 00 FF 10 00 9F BB 27 D8 03 61
+10 00 9E 9B 27 DB 00 00 0A 11 9F BB 17 D7 00 00
+C2 9A 82 04 80 01 00 FF 00 0F 16 25 40 00 01 C0
+</ingame>
+
+Ls données sont chargées dans le CPU ainsi :
+9A dans $1B
+C2 dans $1C avec la fonction située à C418
+ect ...
+
+On considère que l'on à récupérer le header, ici, C2
+On entre dans la fonction 01F413
+
+$C2 AND $3F = $2
+$2 < = $4
+$CCE27E + $4 = $CCE282 (voir ci-dessous)
+
+<ingame>
+[Pointers related to the graphics sections above. See subroutine C1/F456]
+CC/E27E:	00E3	[00: Kippo, eh?]
+CC/E280:	60E3	[01:
+CC/E282:	BAE3	[02:
+CC/E284:	05E4	[03:
+</ingame>
+
+Ainsi, on récupère dans l'adresse CC/E282 : E3BA
+Avec E3BA on a la boucle de la définition du tileset qui se situe ici :
+
+<ingame>
+CC/E3BA:	CFC8      	INY 
+CC/E3BC:	1FE8C8
+			3F24C9    	BIT $C9
+CC/E3C2:	1F3FC9
+			7F10CB    	BPL $E393
+CC/E3C8:	4F55CB
+			AF11CA    	ORA ($CA),Y
+CC/E3CE:	1F26CA
+			1F3ACA      	DEX 
+CC/E3D4:	1F000000	ORA $000000,X
+CC/E3D8:	3480    	BIT $80,X
+CC/E3DA:	0100    	ORA ($00,X)
+CC/E3DC:	0000    	BRK #$00
+CC/E3DE:	3680    	ROL $80,X
+CC/E3E0:	0E0000  	ASL $0000
+</ingame>
+
+Cette boucle est utilisée dans la fonction : $01F510:
+
+Le header est CFC8, il est entré dans le registre
+Il est rappelé à la fonction 01F49F
+
+Puis à la fonction 01F510, on sort l'adresse de la tile 1 du tileset
+A Savoir ; les valeurs des adresses des tiles sont stockées à l'adresse 04 - 05 du CPU
+C8CF <<<<< = 19 EO pendant $1F+$1 = (20)h = 32 tiles
+C8E8 <<<<< = 1D 00 pendant $3F+$1 = (40)h = 64 tiles
+C924 <<<<< = 24 80 pendant $1F+$1 = (20)h = 32 tiles
+ect ...
+
+Les tiles sont codées en dures  à l'adresse 0x1D0000
+Les première tiles à être appelées pour la map 128 sont situées à
+<ingame>
+0x1D19E0	49 10 65 60 91 60 EA 01 AC 10 60 80 98 80 59 80
+0x1D19F0	FF 00 9F 00 FF 00 FF 40 FF 00 7F 40 7F 00 7F 00
+<§ingame>
