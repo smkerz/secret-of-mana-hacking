@@ -1,10 +1,36 @@
 Todo, savoir ce que fait le 82 dans le PRG
 Mettre sur un excel avec deux / trois rooms pour mieux analyser
 
-Breakpoint en cours :
-C4A0 Lecture du header
-01F510	Construction du tileset
 
+!!! Tileset 16 à 1C
+
+!!!
+J'en suis a analyser où sont les tileset 16 dans la WRAM, pour l'instant j'en suis à 19000 !!!!
+D0C97 en lecture : 2672 2223 2223, début de donnée de la room6 de la map 128
+
+
+
+Breakpoints pour suivre la construction
+--
+C481 : fonction qui commence la construction
+D0C97 en lecture : 6E A2 23 C6 22 E8 86 24 34, début de donnée de la room6 de la map 128
+elle finit à CD/11BF
+La room est construite à B04C**
+Les lignes sont construites à CAA9
+
+Le layer 1 est codé dans la WRAM à A000
+
+
+
+Décompression de la map et on la stocke décompressé dans la WRAM à 10000 grâce à la fonction D011
+
+
+
+
+
+En Bref,
+
+pour voir les tiles qui d'ajoutent une à une : break point sur la ligne WRAM A000
 
 
 Bien Commenté
@@ -13,13 +39,21 @@ Bien Commenté
 Map 128
 
 La fonction à C4AA remplis complétement le tileset 8x8
+Et tout commence à C481 pour la constructio des tiles
 
 Construction des Objets de la map 128 : 0x8AE90 (ci-dessous)
 
 <ingame>
-C2 9A 82 00 80 41 00 FF 10 00 9F BB 27 D8 03 61
-10 00 9E 9B 27 DB 00 00 0A 11 9F BB 17 D7 00 00
-C2 9A 82 04 80 01 00 FF 00 0F 16 25 40 00 01 C0
+[80: Waterfall Pool]
+C8/AE90:	C2 9A 8200 80 41 00 FF
+C8/AE98:	10009FBB 27D8 0361
+C8/AEA0:	10009E9B 27DB 0000
+C8/AEA8:	0A119FBB 17D7 0000
+
+C8/AEB0:	C29A8204 800100FF
+C8/AEB8:	000F1625 4000 01C0
+C8/AEC0:	000F141A 4000 01C0
+C8/AEC8:	000F2115 4000 01C0
 </ingame>
 
 Ls données sont chargées dans le CPU ainsi :
@@ -40,6 +74,8 @@ CC/E27E:	00E3	[00: Kippo, eh?]
 CC/E280:	60E3	[01:
 CC/E282:	BAE3	[02:
 CC/E284:	05E4	[03:
+CC/E286:	20E4	[04: Inside Kippo Village houses?]
+CC/E288:	41E4	[05:
 </ingame>
 
 Ainsi, on récupère dans l'adresse CC/E282 : E3BA
